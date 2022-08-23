@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/racro
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://racro.github.io
+  * I am racro (https://keybase.io/racro) on keybase.
+  * I have a public key ASDkFeeRJGPCqRdt3Dv7u2cEhSwKsmPfA4N6tRQHd9jACQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e415e7912463c2a9176ddc3bfbbb6704852c0ab263df03837ab5140777d8c0090a",
+      "host": "keybase.io",
+      "kid": "0120e415e7912463c2a9176ddc3bfbbb6704852c0ab263df03837ab5140777d8c0090a",
+      "uid": "cc563784d46ad24c1684ce43d200cf19",
+      "username": "racro"
+    },
+    "merkle_root": {
+      "ctime": 1661280148,
+      "hash": "eaaba45878a95abf23293e58dcc830ecdd5cd988ce36d58adb17825dbc5fae8fff0811db7153f5d230a1321589d5f887f9ef243b3235656b4f6e3e6b9e29c220",
+      "hash_meta": "37c3fd3e345d178ca8c197dd5ec5c27fb72865671699441d458b0dd8ed389b4e",
+      "seqno": 23074817
+    },
+    "service": {
+      "entropy": "KA7p7QtGeEGPyJ6VoRJ7nekp",
+      "hostname": "racro.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.1"
+  },
+  "ctime": 1661280158,
+  "expire_in": 504576000,
+  "prev": "e6b9a964f612bf256971288d35e61d49bd780fdb3bd62f178d361e71ee293de2",
+  "seqno": 15,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg5BXnkSRjwqkXbdw7+7tnBIUsCrJj3wODerUUB3fYwAkKp3BheWxvYWTESpcCD8Qg5rmpZPYSvyVpcSiNNeYdSb14D9s71i8XjTYece4pPeLEIAvFpraNTEnNp0MX/z9/uD+TeC4jqXu2OdKRPZvwilceAgHCo3NpZ8RAe0hrySjXQVRcqiqUJrtSeDOYGvwB5G99c9Ubc9tqtZlgkanuxT6GRlQeY0M26/btXG2cSeAOMeYjjKu3tI94AKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIIkO+mJHKjoetSk0kRm/wRRcGdcdRiKz5xTyHmGZddgFo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/racro
+
+==================================================================

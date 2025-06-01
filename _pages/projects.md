@@ -63,20 +63,3 @@ horizontal: false
   {% endif %}
 {% endif %}
 </div>
-
-## Selected Projects
-
-### LLM-assisted Ad Content Moderation Framework
-Developed a framework to enable adblockers to detect and block problematic ads using LLMs, protecting users from excessive tracking and intrusive advertising. [Paper](#) | [Code](#)
-
-### Drifuzz: Kernel-Assisted Network Fuzzer
-A kernel-assisted network fuzzer for PCI device drivers, discovering and patching bugs in Linux driver code. [Paper](#) | [Code](#)
-
-### KANF: Kernel-Assisted Network Fuzzer
-Developed at UCSB SecLab, tested 10,000+ open-source network programs for bugs using Linux kernel driver modules and networking tools. [Read more](https://github.com/Racro/kanf)
-
-### Privacy-Preserving Browser Extension Evaluation
-Built a usability and privacy framework to evaluate browser extensions on performance, permission abuse, and web compatibility. [Paper](#) | [Code](#)
-
-### Web Breakage Analysis for Adblockers
-Conducted large-scale web measurement experiments to quantify and improve web breakages caused by adblockers. [Paper](#) | [Code](#)

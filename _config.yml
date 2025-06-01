@@ -2,24 +2,24 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Ritik Roongta
-first_name: Ritik
-middle_name: ""
-last_name: Roongta
+title: blank # the website title (if blank, full name will be used instead)
+first_name: You
+middle_name: R.
+last_name: Name
 contact_note: >
-  Email: firstname.r [at] nyu.edu | firstname+lastname [at] gmail.com
+  You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Ph.D. Student, Computer Science Department, NYU Tandon. Research interests: systems security, privacy, vulnerability discovery (fuzzing, static code analysis, automated testing). Experience with Linux kernel and Chrome browser. Undergraduate from IIT Bombay, India (2021), summer at UCSB (KANF project).
+  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: Ritik Roongta, NYU, IITB, CSE, cybersecurity, systems security, privacy, fuzzing, static code analysis, automated testing
+keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: "🎓" # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://racro.github.io # the base hostname & protocol for your site
-baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
+url: https://alshedivat.github.io # the base hostname & protocol for your site
+baseurl: /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -641,10 +641,3 @@ jsonresume:
   - languages
   - interests
   - references
-
-social:
-  - {icon: fa fa-file-pdf, link: files/CV_Quad.pdf, name: CV}
-  - {icon: ai ai-google-scholar, link: https://scholar.google.com/citations?user=HmqxD1IAAAAJ&hl=en, name: Google Scholar}
-  - {icon: fa fa-twitter, link: https://twitter.com/roongta_ritik, name: Twitter}
-  - {icon: fa fa-github, link: https://github.com/Racro, name: Github}
-  - {icon: fa fa-linkedin, link: https://www.linkedin.com/in/ritik-roongta-7baa04157/, name: LinkedIn}

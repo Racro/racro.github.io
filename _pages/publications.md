@@ -18,16 +18,3 @@ nav_order: 2
 {% bibliography %}
 
 </div>
-
-Publications are managed via BibTeX in the `_bibliography/papers.bib` file. Add your BibTeX entries there and they will appear here automatically.
-
-Example:
-
-```bibtex
-@inproceedings{roongta2022drifuzz,
-  title={Drifuzz: Harvesting Bugs in Device Drivers from Golden Seeds},
-  author={Ritik Roongta and others},
-  booktitle={USENIX},
-  year={2022}
-}
-```

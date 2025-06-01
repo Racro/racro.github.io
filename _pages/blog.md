@@ -16,8 +16,6 @@ pagination:
     after: 3 # The number of links after the current page
 ---
 
-Welcome to my blog! Here I share thoughts on research, security, and technology. Stay tuned for updates.
-
 <div class="post">
 
 {% assign blog_name_size = site.blog_name | size %}

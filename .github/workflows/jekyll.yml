@@ -33,27 +33,37 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
       - name: Install System Dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y libxml2-dev libxslt-dev
+      
       - name: Setup Ruby
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
           ruby-version: '3.1.4'
-          bundler-cache: true # This will cache dependencies between runs
-          cache-version: 0
           bundler: '2.6.9'
+          bundler-cache: true
+          cache-version: 0
+      
+      - name: Configure Bundler
+        run: |
+          bundle config set --local path 'vendor/bundle'
+          bundle config set --local jobs 4
+          bundle config set --local retry 3
+          bundle config set --local deployment 'true'
+      
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      
       - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      
       - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
 
   # Deployment job
@@ -67,8 +77,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Configure Bundler
-        run: |
-          bundle config set --local jobs 4
-          bundle config set --local retry 3
-          bundle config set --local deployment 'true'

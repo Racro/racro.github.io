@@ -2,52 +2,33 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Student, Computer Science Department, NYU Tandon
+subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+
 profile:
   align: right
-  image: ritik.jpeg
-  image_circular: false
+  image: prof_pic.jpg
+  image_circular: false # crops the image to make it circular
   more_info: >
-    <p>NYU Tandon School of Engineering</p>
-    <p>Brooklyn, NY</p>
-    <p>Email: ritik.r@nyu.edu</p>
-selected_papers: true
-social: true
+    <p>555 your office number</p>
+    <p>123 your address street</p>
+    <p>Your City, State 12345</p>
+
+selected_papers: true # includes a list of papers marked as "selected={true}"
+social: true # includes social icons at the bottom of the page
+
 announcements:
-  enabled: true
-  scrollable: true
-  limit: 5
+  enabled: true # includes a list of news items
+  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  limit: 5 # leave blank to include all the news in the `_news` folder
+
 latest_posts:
   enabled: true
-  scrollable: true
-  limit: 3
+  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  limit: 3 # leave blank to include all the blog posts
 ---
 
-## Research Statement
-I aim to build open source frameworks that create real world impact while advancing academic research. I focus on transforming digital advertising through automated content moderation and detecting malicious actors in the ad supply chain. My past work includes empirical studies on privacy-enhancing technologies, propaganda, and harmful ads; using AI to detect contextual nuances and mitigate these issues at scale. Going forward, I aim to enhance user experience online by uncovering differential treatment, fighting fraud, and conducting large scale measurements to improve widely used tools.
+Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-## Education
-- **Ph.D. in Computer Science**, New York University (NYU), Sep '21 – May '26  
-  Advisors: Prof. R. Greenstadt & Prof. BD. Gavitt  
-  Thesis: Adblocking's Privacy Tradeoffs and the Future of Sustainable Advertising
-- **B.Tech in Computer Science**, Indian Institute of Technology Bombay (IITB), Sep '17 – May '21  
-  GPA: 8.15/10.0  
-  Thesis: Large-scale assessment of vulnerabilities in open-source network server binaries
+Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-## Summary
-Ph.D. student at NYU Tandon, focusing on systems security, privacy, and digital advertising. Experienced in large-scale empirical studies, open source frameworks, and automated content moderation. Passionate about improving user experience and online privacy.
-
-## Awards & Leadership
-- Presented research posters at Columbia Privacy Day and Google Ad Privacy Day (2025)
-- Scholarship to attend summer school in EPFL, Switzerland and CISPA, Germany (2024)
-- Travel grant to RightsCon conference in Costa Rica (2023)
-- SoE fellowship from NYU in freshman year (2021)
-- All India Rank 48 in JEE-Advanced (2017)
-- Pratibha Scholarship for academic excellence by Aditya Birla Group (2017-21)
-- KVPY Fellowship and NTSE Scholarship by Government of India (2016)
-- 0.1% Certificate of Merit in Chemistry and Physics by Government of India (AISSCE) (2017)
-
-## Reviewer & Service
-- Program Committee: NDSS '25, PETS '24, MADWEB '25
-- Artifact Committee: CCS '24/25, USENIX '23/24, PETS '25
-- General Secretary, IIT Bombay CSE Association (2020-21): Headed a team of 24+ students, organized events and wellness webinars, managed annual budget > INR 3.5 lakhs
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.

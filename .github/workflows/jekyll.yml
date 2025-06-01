@@ -37,14 +37,14 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libxml2-dev libxslt-dev
+          sudo apt-get install -y libxml2-dev libxslt-dev build-essential
       
       - name: Setup Ruby
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
           ruby-version: '3.1.4'
           bundler: '2.6.9'
-          bundler-cache: true
+          bundler-cache: false  # We'll handle caching manually
           cache-version: 0
       
       - name: Configure Bundler
@@ -53,6 +53,12 @@ jobs:
           bundle config set --local jobs 4
           bundle config set --local retry 3
           bundle config set --local deployment 'true'
+          bundle config set --local without 'development test'
+      
+      - name: Install Dependencies
+        run: |
+          bundle install --jobs 4 --retry 3
+          bundle info
       
       - name: Setup Pages
         id: pages

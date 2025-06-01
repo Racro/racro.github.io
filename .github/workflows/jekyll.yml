@@ -38,13 +38,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libxml2-dev libxslt-dev
       - name: Setup Ruby
-        # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
-          ruby-version: '3.1'
-          bundler-cache: true
+          ruby-version: '3.1.4'
+          bundler-cache: true # This will cache dependencies between runs
           cache-version: 0
-          bundler: '2.4.22'
+          bundler: '2.6.9'
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -68,3 +67,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Configure Bundler
+        run: |
+          bundle config set --local jobs 4
+          bundle config set --local retry 3
+          bundle config set --local deployment 'true'

@@ -135,8 +135,8 @@ checked program was:
 have_func: checking for _lzcnt_u32() in x86intrin.h... -------------------- no
 
 LD_LIBRARY_PATH=.:/usr/local/lib "gcc -o conftest -I/usr/local/include/ruby-3.1.0/x86_64-linux -I/usr/local/include/ruby-3.1.0/ruby/backward -I/usr/local/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef conftest.c  -L. -L/usr/local/lib -Wl,-rpath,/usr/local/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/usr/local/lib -L/usr/local/lib -lruby-static -lz -lpthread -lrt -lrt -lgmp -ldl -lcrypt -lm   -lm  -lc"
-/usr/bin/ld: /tmp/cc1B04zd.o: in function `t':
-/home/ritik/work/racro.github.io/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.9/ext/bigdecimal/conftest.c:16: undefined reference to `_lzcnt_u32'
+/usr/bin/ld: /tmp/ccCnzchc.o: in function `t':
+/home/ritik/work/al-folio/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.9/ext/bigdecimal/conftest.c:16: undefined reference to `_lzcnt_u32'
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -197,8 +197,8 @@ checked program was:
 have_func: checking for _lzcnt_u64() in x86intrin.h... -------------------- no
 
 LD_LIBRARY_PATH=.:/usr/local/lib "gcc -o conftest -I/usr/local/include/ruby-3.1.0/x86_64-linux -I/usr/local/include/ruby-3.1.0/ruby/backward -I/usr/local/include/ruby-3.1.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wundef conftest.c  -L. -L/usr/local/lib -Wl,-rpath,/usr/local/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/usr/local/lib -L/usr/local/lib -lruby-static -lz -lpthread -lrt -lrt -lgmp -ldl -lcrypt -lm   -lm  -lc"
-/usr/bin/ld: /tmp/ccJ5HTGs.o: in function `t':
-/home/ritik/work/racro.github.io/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.9/ext/bigdecimal/conftest.c:16: undefined reference to `_lzcnt_u64'
+/usr/bin/ld: /tmp/cc6iklTd.o: in function `t':
+/home/ritik/work/al-folio/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.9/ext/bigdecimal/conftest.c:16: undefined reference to `_lzcnt_u64'
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -392,8 +392,8 @@ conftest.c:16:13: warning: conflicting types for built-in function ‘__builtin_
 cc1: warning: unrecognized command line option ‘-Wno-self-assign’
 cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
 cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
-/usr/bin/ld: /tmp/ccosNWmZ.o: in function `t':
-/home/ritik/work/racro.github.io/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.9/ext/bigdecimal/conftest.c:17: undefined reference to `__builtin_isfinite'
+/usr/bin/ld: /tmp/ccozoh4n.o: in function `t':
+/home/ritik/work/al-folio/vendor/bundle/ruby/3.1.0/gems/bigdecimal-3.1.9/ext/bigdecimal/conftest.c:17: undefined reference to `__builtin_isfinite'
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */

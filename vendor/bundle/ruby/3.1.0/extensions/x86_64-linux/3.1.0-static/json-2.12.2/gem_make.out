@@ -1,4 +1,4 @@
-current directory: /home/ritik/work/racro.github.io/vendor/bundle/ruby/3.1.0/gems/json-2.12.2/ext/json/ext/parser
+current directory: /home/ritik/work/al-folio/vendor/bundle/ruby/3.1.0/gems/json-2.12.2/ext/json/ext/parser
 /usr/local/bin/ruby -I /usr/local/lib/ruby/3.1.0 extconf.rb
 checking for rb_enc_interned_str() in ruby.h... yes
 checking for rb_hash_new_capa() in ruby.h... no
@@ -7,14 +7,14 @@ checking for strnlen() in string.h... yes
 checking for whether -std=c99 is accepted as CFLAGS... yes
 creating Makefile
 
-current directory: /home/ritik/work/racro.github.io/vendor/bundle/ruby/3.1.0/gems/json-2.12.2/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20250531-894749-wt2o6b sitelibdir\=./.gem.20250531-894749-wt2o6b clean
+current directory: /home/ritik/work/al-folio/vendor/bundle/ruby/3.1.0/gems/json-2.12.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250531-897142-gcerdv sitelibdir\=./.gem.20250531-897142-gcerdv clean
 
-current directory: /home/ritik/work/racro.github.io/vendor/bundle/ruby/3.1.0/gems/json-2.12.2/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20250531-894749-wt2o6b sitelibdir\=./.gem.20250531-894749-wt2o6b
+current directory: /home/ritik/work/al-folio/vendor/bundle/ruby/3.1.0/gems/json-2.12.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250531-897142-gcerdv sitelibdir\=./.gem.20250531-897142-gcerdv
 compiling parser.c
 linking shared-object json/ext/parser.so
 
-current directory: /home/ritik/work/racro.github.io/vendor/bundle/ruby/3.1.0/gems/json-2.12.2/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20250531-894749-wt2o6b sitelibdir\=./.gem.20250531-894749-wt2o6b install
-/usr/bin/install -c -m 0755 parser.so ./.gem.20250531-894749-wt2o6b/json/ext
+current directory: /home/ritik/work/al-folio/vendor/bundle/ruby/3.1.0/gems/json-2.12.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250531-897142-gcerdv sitelibdir\=./.gem.20250531-897142-gcerdv install
+/usr/bin/install -c -m 0755 parser.so ./.gem.20250531-897142-gcerdv/json/ext

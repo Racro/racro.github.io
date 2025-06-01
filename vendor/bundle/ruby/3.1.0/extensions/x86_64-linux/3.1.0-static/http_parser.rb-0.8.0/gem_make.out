@@ -1,12 +1,12 @@
-current directory: /home/ritik/work/racro.github.io/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+current directory: /home/ritik/work/al-folio/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
 /usr/local/bin/ruby -I /usr/local/lib/ruby/3.1.0 extconf.rb
 creating Makefile
 
-current directory: /home/ritik/work/racro.github.io/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-make DESTDIR\= sitearchdir\=./.gem.20250531-894749-68cf8h sitelibdir\=./.gem.20250531-894749-68cf8h clean
+current directory: /home/ritik/work/al-folio/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20250531-897142-48o4t0 sitelibdir\=./.gem.20250531-897142-48o4t0 clean
 
-current directory: /home/ritik/work/racro.github.io/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-make DESTDIR\= sitearchdir\=./.gem.20250531-894749-68cf8h sitelibdir\=./.gem.20250531-894749-68cf8h
+current directory: /home/ritik/work/al-folio/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20250531-897142-48o4t0 sitelibdir\=./.gem.20250531-897142-48o4t0
 compiling ruby_http_parser.c
 ruby_http_parser.c: In function ‘Parser_execute’:
 ruby_http_parser.c:365:17: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘long int’ [-Wsign-compare]
@@ -23,6 +23,6 @@ cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand�
 compiling ryah_http_parser.c
 linking shared-object ruby_http_parser.so
 
-current directory: /home/ritik/work/racro.github.io/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-make DESTDIR\= sitearchdir\=./.gem.20250531-894749-68cf8h sitelibdir\=./.gem.20250531-894749-68cf8h install
-/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20250531-894749-68cf8h
+current directory: /home/ritik/work/al-folio/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20250531-897142-48o4t0 sitelibdir\=./.gem.20250531-897142-48o4t0 install
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20250531-897142-48o4t0

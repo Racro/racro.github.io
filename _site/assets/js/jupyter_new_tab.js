@@ -1,1 +1,1 @@
-$(document).ready((function(){$(".jupyter-notebook-iframe-container").each((function(){let t=$(this).find("iframe").get(0).contentWindow.document.body;$(t).find("a").each((function(){$(this).attr("href")&&$(this).attr("target","_blank")}))}))}));
+document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelectorAll('a[href$=".ipynb"]');e.forEach((e=>{e.addEventListener("click",(function(e){e.preventDefault();const t=this.href;window.open(t,"_blank")}))})),e.forEach((e=>{e.setAttribute("target","_blank")}))}));

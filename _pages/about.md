@@ -1,4 +1,36 @@
 ---
+layout: page
+permalink: /about/
+title: about
+description: 
+nav: true
+nav_order: 1
+---
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/ritik.jpeg' | relative_url }}" alt="" title="profile picture"/>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <p>
+            I am a Ph.D. student in the Computer Science Department at NYU Tandon School of Engineering.
+        </p>
+        <p>
+            My research interests lie in the intersection of computer security and systems, with a particular focus on:
+            <ul>
+                <li>Web Security</li>
+                <li>Program Analysis</li>
+                <li>Fuzzing</li>
+                <li>Privacy</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+---
 layout: about
 title: about
 permalink: /

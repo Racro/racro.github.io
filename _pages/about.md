@@ -1,4 +1,39 @@
 ---
+layout: about
+title: about
+permalink: /
+subtitle: Ph.D. Student in Computer Science at NYU Tandon
+
+profile:
+  align: right
+  image: ritik.jpeg
+  image_circular: false
+  more_info: >
+    <p>Computer Science Department</p>
+    <p>NYU Tandon School of Engineering</p>
+    <p>Brooklyn, NY</p>
+
+selected_papers: true
+social: true
+
+announcements:
+  enabled: true
+  scrollable: true
+  limit: 5
+
+latest_posts:
+  enabled: true
+  scrollable: true
+  limit: 3
+---
+
+I am a Ph.D. student in the Computer Science Department at NYU Tandon School of Engineering. My research interests lie in the intersection of computer security and systems, with a particular focus on web security, program analysis, fuzzing, and privacy.
+
+I received my B.Tech in Computer Science and Engineering from the Indian Institute of Technology Bombay in 2021. During my time at IIT Bombay, I worked on various security projects and developed a strong foundation in computer systems and security.
+
+My current research focuses on developing automated techniques for analyzing and improving web security, with a particular emphasis on privacy-preserving technologies and program analysis. I am passionate about making the web a safer place for everyone.
+
+---
 layout: page
 permalink: /about/
 title: about

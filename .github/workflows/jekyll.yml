@@ -58,7 +58,12 @@ jobs:
       - name: Install Dependencies
         run: |
           bundle install --jobs 4 --retry 3
-          bundle info
+          echo "=== Ruby Version ==="
+          ruby -v
+          echo "=== Bundler Version ==="
+          bundle -v
+          echo "=== Installed Gems ==="
+          bundle list
       
       - name: Setup Pages
         id: pages

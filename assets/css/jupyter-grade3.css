@@ -1,0 +1,121 @@
+/* Jupyter Grade3 theme styles */
+
+/* Code cell styles */
+.jp-CodeCell {
+  padding: 1em;
+  margin: 1em 0;
+  border: 1px solid var(--jp-border-color0);
+  border-radius: var(--jp-border-radius);
+  background-color: var(--jp-layout-color0);
+}
+
+/* Input area styles */
+.jp-InputArea {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em;
+  border: 1px solid var(--jp-border-color2);
+  border-radius: var(--jp-border-radius);
+  background: var(--jp-layout-color1);
+}
+
+/* Output area styles */
+.jp-OutputArea {
+  margin-top: 0.5em;
+  padding: 0.5em;
+  border: 1px solid var(--jp-border-color2);
+  border-radius: var(--jp-border-radius);
+  background: var(--jp-layout-color1);
+}
+
+/* Code mirror styles */
+.jp-CodeMirrorEditor {
+  border: 1px solid var(--jp-border-color2);
+  border-radius: var(--jp-border-radius);
+  background: var(--jp-layout-color1);
+}
+
+/* Markdown cell styles */
+.jp-MarkdownCell {
+  padding: 1em;
+  margin: 1em 0;
+  border: 1px solid var(--jp-border-color0);
+  border-radius: var(--jp-border-radius);
+  background-color: var(--jp-layout-color0);
+}
+
+/* Cell toolbar styles */
+.jp-CellToolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0.5em;
+  border-bottom: 1px solid var(--jp-border-color2);
+  background: var(--jp-layout-color1);
+}
+
+/* Cell prompt styles */
+.jp-InputPrompt {
+  color: var(--jp-inverse-layout-color3);
+  font-family: monospace;
+  padding: 0.5em;
+  text-align: right;
+  min-width: 3em;
+}
+
+.jp-OutputPrompt {
+  color: var(--jp-inverse-layout-color3);
+  font-family: monospace;
+  padding: 0.5em;
+  text-align: right;
+  min-width: 3em;
+}
+
+/* Code styles */
+.jp-CodeCell pre {
+  margin: 0;
+  padding: 0.5em;
+  border: 1px solid var(--jp-border-color2);
+  border-radius: var(--jp-border-radius);
+  background: var(--jp-layout-color1);
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Output styles */
+.jp-OutputArea-output {
+  margin: 0;
+  padding: 0.5em;
+  border: 1px solid var(--jp-border-color2);
+  border-radius: var(--jp-border-radius);
+  background: var(--jp-layout-color1);
+}
+
+/* Error styles */
+.jp-OutputArea-output.jp-Error {
+  color: #d32f2f;
+  background-color: #ffebee;
+  border: 1px solid #ffcdd2;
+}
+
+/* Success styles */
+.jp-OutputArea-output.jp-Success {
+  color: #388e3c;
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
+}
+
+/* Warning styles */
+.jp-OutputArea-output.jp-Warning {
+  color: #f57c00;
+  background-color: #fff3e0;
+  border: 1px solid #ffe0b2;
+}
+
+/* Info styles */
+.jp-OutputArea-output.jp-Info {
+  color: #1976d2;
+  background-color: #e3f2fd;
+  border: 1px solid #bbdefb;
+} 

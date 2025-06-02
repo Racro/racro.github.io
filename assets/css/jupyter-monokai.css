@@ -1,0 +1,150 @@
+/* Jupyter Monokai theme styles */
+
+/* Code cell styles */
+.jp-CodeCell {
+  padding: 1em;
+  margin: 1em 0;
+  border: 1px solid #272822;
+  border-radius: var(--jp-border-radius);
+  background-color: #272822;
+}
+
+/* Input area styles */
+.jp-InputArea {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em;
+  border: 1px solid #3e3d32;
+  border-radius: var(--jp-border-radius);
+  background: #272822;
+}
+
+/* Output area styles */
+.jp-OutputArea {
+  margin-top: 0.5em;
+  padding: 0.5em;
+  border: 1px solid #3e3d32;
+  border-radius: var(--jp-border-radius);
+  background: #272822;
+}
+
+/* Code mirror styles */
+.jp-CodeMirrorEditor {
+  border: 1px solid #3e3d32;
+  border-radius: var(--jp-border-radius);
+  background: #272822;
+}
+
+/* Markdown cell styles */
+.jp-MarkdownCell {
+  padding: 1em;
+  margin: 1em 0;
+  border: 1px solid #272822;
+  border-radius: var(--jp-border-radius);
+  background-color: #272822;
+  color: #f8f8f2;
+}
+
+/* Cell toolbar styles */
+.jp-CellToolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0.5em;
+  border-bottom: 1px solid #3e3d32;
+  background: #272822;
+}
+
+/* Cell prompt styles */
+.jp-InputPrompt {
+  color: #a6e22e;
+  font-family: monospace;
+  padding: 0.5em;
+  text-align: right;
+  min-width: 3em;
+}
+
+.jp-OutputPrompt {
+  color: #f92672;
+  font-family: monospace;
+  padding: 0.5em;
+  text-align: right;
+  min-width: 3em;
+}
+
+/* Code styles */
+.jp-CodeCell pre {
+  margin: 0;
+  padding: 0.5em;
+  border: 1px solid #3e3d32;
+  border-radius: var(--jp-border-radius);
+  background: #272822;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #f8f8f2;
+}
+
+/* Output styles */
+.jp-OutputArea-output {
+  margin: 0;
+  padding: 0.5em;
+  border: 1px solid #3e3d32;
+  border-radius: var(--jp-border-radius);
+  background: #272822;
+  color: #f8f8f2;
+}
+
+/* Error styles */
+.jp-OutputArea-output.jp-Error {
+  color: #f92672;
+  background-color: #272822;
+  border: 1px solid #3e3d32;
+}
+
+/* Success styles */
+.jp-OutputArea-output.jp-Success {
+  color: #a6e22e;
+  background-color: #272822;
+  border: 1px solid #3e3d32;
+}
+
+/* Warning styles */
+.jp-OutputArea-output.jp-Warning {
+  color: #fd971f;
+  background-color: #272822;
+  border: 1px solid #3e3d32;
+}
+
+/* Info styles */
+.jp-OutputArea-output.jp-Info {
+  color: #66d9ef;
+  background-color: #272822;
+  border: 1px solid #3e3d32;
+}
+
+/* Syntax highlighting */
+.cm-s-monokai .cm-keyword { color: #f92672; }
+.cm-s-monokai .cm-atom { color: #ae81ff; }
+.cm-s-monokai .cm-number { color: #ae81ff; }
+.cm-s-monokai .cm-def { color: #fd971f; }
+.cm-s-monokai .cm-variable { color: #f8f8f2; }
+.cm-s-monokai .cm-variable-2 { color: #9effff; }
+.cm-s-monokai .cm-variable-3 { color: #66d9ef; }
+.cm-s-monokai .cm-property { color: #f8f8f2; }
+.cm-s-monokai .cm-operator { color: #f92672; }
+.cm-s-monokai .cm-comment { color: #75715e; }
+.cm-s-monokai .cm-string { color: #e6db74; }
+.cm-s-monokai .cm-string-2 { color: #e6db74; }
+.cm-s-monokai .cm-meta { color: #f8f8f2; }
+.cm-s-monokai .cm-qualifier { color: #fd971f; }
+.cm-s-monokai .cm-builtin { color: #fd971f; }
+.cm-s-monokai .cm-bracket { color: #f8f8f2; }
+.cm-s-monokai .cm-tag { color: #f92672; }
+.cm-s-monokai .cm-attribute { color: #a6e22e; }
+.cm-s-monokai .cm-header { color: #f8f8f2; }
+.cm-s-monokai .cm-quote { color: #e6db74; }
+.cm-s-monokai .cm-hr { color: #f8f8f2; }
+.cm-s-monokai .cm-link { color: #66d9ef; }
+.cm-s-monokai .cm-negative { color: #f92672; }
+.cm-s-monokai .cm-positive { color: #a6e22e; } 

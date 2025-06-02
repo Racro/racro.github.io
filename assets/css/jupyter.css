@@ -1,0 +1,41 @@
+/* Jupyter notebooks styles */
+
+/* To generate the HTML files, run:
+ * jupyter nbconvert --execute --to html blog.ipynb --HTMLExporter.theme=light
+ * jupyter nbconvert --execute --to html blog.ipynb --HTMLExporter.theme=dark
+ */
+
+/* The following variables, specify the visual styling of borders in JupyterLab.
+ * They are used to create a more cohesive look and feel across the application.
+ */
+:root {
+  --jp-border-width: 1px;
+  --jp-border-color0: var(--md-grey-400);
+  --jp-border-color1: var(--md-grey-400);
+  --jp-border-color2: var(--md-grey-300);
+  --jp-border-color3: var(--md-grey-200);
+  --jp-border-radius: 2px;
+
+  /* The following are the main layout colors use in JupyterLab. In a light
+   * theme, these would be the background colors of the main areas of
+   * the UI.
+   */
+  --jp-layout-color0: white;
+  --jp-layout-color1: white;
+  --jp-layout-color2: var(--md-grey-200);
+  --jp-layout-color3: var(--md-grey-300);
+  --jp-layout-color4: var(--md-grey-400);
+
+  /* The following are the inverse layout colors use in JupyterLab. In a light
+   * theme, these would be the text colors of the main areas of
+   * the UI.
+   */
+  --jp-inverse-layout-color0: var(--md-grey-900);
+  --jp-inverse-layout-color1: var(--md-grey-800);
+  --jp-inverse-layout-color2: var(--md-grey-700);
+  --jp-inverse-layout-color3: var(--md-grey-600);
+  --jp-inverse-layout-color4: var(--md-grey-500);
+}
+
+/* Import theme-specific styles */
+@import "jupyter-grade3"; 

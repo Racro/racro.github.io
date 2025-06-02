@@ -34,6 +34,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
+      - name: Cache System Dependencies
+        uses: actions/cache@v4
+        id: system-cache
+        with:
+          path: /var/cache/apt/archives
+          key: ${{ runner.os }}-apt-${{ hashFiles('**/*.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-
+      
       - name: Install System Dependencies
         run: |
           sudo apt-get update
@@ -44,7 +53,7 @@ jobs:
         with:
           ruby-version: '3.2.2'
           bundler: '2.6.9'
-          bundler-cache: false  # We'll handle caching manually
+          bundler-cache: true  # Enable bundler caching
           cache-version: 0
       
       - name: Configure Bundler
@@ -54,6 +63,18 @@ jobs:
           bundle config set --local retry 3
           bundle config set --local deployment 'true'
           bundle config set --local without 'development test'
+      
+      - name: Cache Jekyll Build
+        uses: actions/cache@v4
+        id: jekyll-cache
+        with:
+          path: |
+            _site
+            .jekyll-cache
+            .jekyll-metadata
+          key: ${{ runner.os }}-jekyll-${{ hashFiles('**/Gemfile.lock', '**/_config.yml', '**/_posts/**', '**/_pages/**', '**/_layouts/**', '**/_includes/**') }}
+          restore-keys: |
+            ${{ runner.os }}-jekyll-
       
       - name: Install Dependencies
         run: |

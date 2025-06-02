@@ -37,7 +37,7 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libxml2-dev libxslt-dev build-essential
+          sudo apt-get install -y libxml2-dev libxslt-dev build-essential imagemagick libmagickwand-dev
       
       - name: Setup Ruby
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
@@ -64,6 +64,8 @@ jobs:
           bundle -v
           echo "=== Installed Gems ==="
           bundle list
+          echo "=== ImageMagick Version ==="
+          convert -version
       
       - name: Setup Pages
         id: pages

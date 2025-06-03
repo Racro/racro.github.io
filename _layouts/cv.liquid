@@ -1,127 +1,128 @@
 ---
 layout: default
 ---
-{% unless site.data.resume %}
-  <div class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        {{ page.title }}
-        {% if page.cv_pdf %}
-          <a
-            {% if page.cv_pdf contains '://' %}
-              href="{{ page.cv_pdf }}"
-            {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
-            {% endif %}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="float-right"
-          >
-            <i class="fa-solid fa-file-pdf"></i>
-          </a>
-        {% endif %}
-      </h1>
-      {% if page.description %}
-        <p class="post-description">{{ page.description }}</p>
-      {% endif %}
-    </header>
 
-    <article>
-      <div class="cv">
-        {% for entry in site.data.cv %}
-          <a class="anchor" id="{{ entry.title }}"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
-            <div>
-              {% if entry.type == 'list' %}
-                {% include cv/list.liquid %}
-              {% elsif entry.type == 'map' %}
-                {% include cv/map.liquid %}
-              {% elsif entry.type == 'nested_list' %}
-                {% include cv/nested_list.liquid %}
-              {% elsif entry.type == 'time_table' %}
-                {% include cv/time_table.liquid %}
-              {% elsif entry.type == 'list_groups' %}
-                {% include cv/list_groups.liquid %}
-              {% else %}
-                {{ entry.contents }}
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </article>
-  </div>
-{% else %}
-  <div class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        {{ page.title }}
-        {% if page.cv_pdf %}
-          <a
-            {% if page.cv_pdf contains '://' %}
-              href="{{ page.cv_pdf }}"
-            {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
-            {% endif %}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="float-right"
-          >
-            <i class="fa-solid fa-file-pdf"></i>
-          </a>
-        {% endif %}
-      </h1>
-      {% if page.description %}
-        <p class="post-description">{{ page.description }}</p>
-      {% endif %}
-    </header>
-
-    <article>
-      <div class="cv">
-        {% for data in site.data.resume %}
-          {% if site.jsonresume and site.jsonresume.size > 0 %}
-            {% unless site.jsonresume contains data[0] %}
-              {% continue %}
-            {% endunless %}
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      {{ page.title }}
+      {% if page.cv_pdf %}
+        <a
+          {% if page.cv_pdf contains '://' %}
+            href="{{ page.cv_pdf }}"
+          {% else %}
+            href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
           {% endif %}
-          {% if data[0] == 'meta' or data[1].size == 0 %} {% continue %} {% endif %}
-          <a class="anchor" id="{{ data[0] }}"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ data[0] | capitalize }}</h3>
-            <div>
-              {% case data[0] %}
-                {% when 'basics' %}
-                  {% include resume/basics.liquid %}
-                {% when 'education' %}
-                  {% include resume/education.liquid %}
-                {% when 'work' %}
-                  {% include resume/work.liquid %}
-                {% when 'volunteer' %}
-                  {% include resume/volunteer.liquid %}
-                {% when 'projects' %}
-                  {% include resume/projects.liquid %}
-                {% when 'awards' %}
-                  {% include resume/awards.liquid %}
-                {% when 'skills' %}
-                  {% include resume/skills.liquid %}
-                {% when 'publications' %}
-                  {% include resume/publications.liquid %}
-                {% when 'languages' %}
-                  {% include resume/languages.liquid %}
-                {% when 'interests' %}
-                  {% include resume/interests.liquid %}
-                {% when 'certificates' %}
-                  {% include resume/certificates.liquid %}
-                {% when 'references' %}
-                  {% include resume/references.liquid %}
-                {% else %}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="float-right"
+        >
+          <i class="fa-solid fa-file-pdf"></i>
+        </a>
+      {% endif %}
+    </h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
 
-              {% endcase %}
-            </div>
-          </div>
-        {% endfor %}
+  <article>
+    <div class="cv">
+      <!-- Research Statement -->
+      <div class="card mt-3 p-3">
+        <h3 class="card-title font-weight-medium">Research Statement</h3>
+        <p>
+          I aim to build open-source frameworks that create real-world impact while advancing academic research. 
+          My focus is on transforming digital advertising through automated content moderation and detecting 
+          malicious actors in the ad supply chain. My work includes empirical studies on privacy-enhancing 
+          technologies, propaganda, and harmful ads using AI to detect contextual nuances and mitigate these issues 
+          at scale. I aim to enhance user experience online by uncovering differential treatment, fighting fraud, 
+          and conducting large-scale measurements to improve widely used tools.
+        </p>
       </div>
-    </article>
-  </div>
-{% endunless %}
+
+      <!-- Education -->
+      <div class="card mt-3 p-3">
+        <h3 class="card-title font-weight-medium">Education</h3>
+        <ul>
+          <li>
+            <strong>Ph.D. in Computer Science</strong>, New York University, Advisor: Prof. R. Greenstadt & Prof. BD. Gavitt, 
+            New York City, USA (Sep ’21 – May ’26)
+            <br>Thesis: Adblocking’s Privacy Tradeoffs and the Future of Sustainable Advertising
+          </li>
+          <li>
+            <strong>B.Tech in Computer Science</strong>, Indian Institute of Technology Bombay, Mumbai, India (Sep ’17 – May ’21)
+            <br>GPA: 8.15/10.0, Thesis: Large-scale assessment of vulnerabilities in open-source network server binaries
+          </li>
+        </ul>
+      </div>
+
+      <!-- Publications -->
+      <div class="card mt-3 p-3">
+        <h3 class="card-title font-weight-medium">Selected Publications</h3>
+        <ul>
+          <li><strong>PETS ’25:</strong> Automated detection and evaluation of problematic ‘allowed’ advertisements (w/ Julia Jose, Hussam Habib, Rachel Greenstadt) [<a href="/papers/Accads_PETS.pdf">Paper</a>] [<a href="/posters/Accads_poster.pdf">Poster</a>] [<a href="https://github.com/Racro/AcceptableAds_PETS.git">Code</a>]</li>
+          <li><strong>EMNLP ’25 (under review):</strong> Propaganda Generation by Large Language Models (w/ Julia Jose, Rachel Greenstadt) [<a href="/posters/Propaganda_poster.pdf">Poster</a>]</li>
+          <li><strong>AsiaCCS ’24:</strong> User-Focused Evaluation of Privacy-Preserving Browser Extensions (w/ Rachel Greenstadt) [<a href="/papers/UserFocusedEvaluation_AsiaCCS.pdf">Paper</a>] [<a href="https://github.com/Racro/measurements_user-concerns.git">Code</a>]</li>
+          <li><strong>SecWeb, IEEE S&P ’24:</strong> Analysis of web breakages caused by adblockers (w/ Mitchell Zhou, Ben Stock, Rachel Greenstadt) [<a href="/papers/secweb_breakages.pdf">Paper</a>] [<a href="https://github.com/Mitchellzhou1/Ad-BlockerResearch.git">Code</a>]</li>
+          <li><strong>USENIX ’22:</strong> Drifuzz: Harvesting Bugs in Device Drivers from Golden Seeds (w/ Zekun Shen, Brendan Dolan-Gavitt) [<a href="/papers/Drifuzz_usenix.pdf">Paper</a>] [<a href="https://github.com/messlabnyu/DrifuzzProject.git">Code</a>]</li>
+        </ul>
+      </div>
+
+      <!-- Technical Skills -->
+      <div class="card mt-3 p-3">
+        <h3 class="card-title font-weight-medium">Technical Skills</h3>
+        <ul>
+          <li><strong>ML Paradigms:</strong> NLP, Prompt Engineering, Sentiment Analysis, Thematic Analysis, Supervised/Unsupervised Learning, RAG</li>
+          <li><strong>ML Frameworks:</strong> PyTorch, LLMs, VLMs, NumPy, Pandas, Jupyter</li>
+          <li><strong>Internet Measurement:</strong> Puppeteer, Selenium, Playwright, Web Extensions</li>
+          <li><strong>Languages:</strong> C/C++, Python, Bash, Java, Assembly, JavaScript</li>
+          <li><strong>Security Tools:</strong> Kali Linux, Metasploit Framework, Xerosploit, Reversing Tools</li>
+          <li><strong>Software:</strong> Linux, Git, MATLAB, MySQL, AutoCAD, LaTeX, AWS, HPC, Slurm</li>
+        </ul>
+      </div>
+
+      <!-- Internship Experience -->
+      <div class="card mt-3 p-3">
+        <h3 class="card-title font-weight-medium">Internship Experience</h3>
+        <ul>
+          <li><strong>CISPA Helmholtz Center</strong> (Jun – Aug ’24), Saarbruecken, Germany — Developed mechanisms to identify differential adblocker treatment, instrumented V8 engine to collect JS logs.</li>
+          <li><strong>University of California, Santa Barbara</strong> (Apr – Nov ’20) — Developed KANF, a kernel-assisted network fuzzer; integrated with AFL.</li>
+          <li><strong>A.P.T Portfolio</strong> (Apr – Jun ’20) — Patched crucial bugs, developed dynamic latency-based exchange simulation model.</li>
+          <li><strong>Lucideus</strong> (May – Jul ’19) — Hardened CentOS Linux using 239 remediations, documented OWASP Top 10 attacks.</li>
+        </ul>
+      </div>
+
+      <!-- Reviewer Duties -->
+      <div class="card mt-3 p-3">
+        <h3 class="card-title font-weight-medium">Reviewer Duties</h3>
+        <p>Program Committee: NDSS ’25, PETS ’24, MADWEB ’25; Artifact Committee: CCS ’24/25, USENIX ’23/24, PETS ’25</p>
+      </div>
+
+      <!-- Positions of Responsibility -->
+      <div class="card mt-3 p-3">
+        <h3 class="card-title font-weight-medium">Position of Responsibility</h3>
+        <ul>
+          <li>General Secretary, IIT Bombay CSE Association (Jul ’20 – May ’21) — Led team of 24+ students for organizing events and wellness webinars.</li>
+          <li>Teaching Assistant, NYU Application Security (Jan ’22 – Apr ’22) — Mentored 100+ students, facilitated practical demonstrations.</li>
+          <li>Thesis Mentor, NYU (Sept ’23 – May ’24) — Mentored undergraduate thesis on web breakages, leading to publication at SecWeb IEEE S&P.</li>
+        </ul>
+      </div>
+
+      <!-- Awards and Leadership -->
+      <div class="card mt-3 p-3">
+        <h3 class="card-title font-weight-medium">Awards and Leadership</h3>
+        <ul>
+          <li>Presented research at Columbia Privacy Day and Google Ad Privacy Day [2025]</li>
+          <li>Summer school scholarship to EPFL, Switzerland and CISPA, Germany [2024]</li>
+          <li>Travel grant to RightsCon Costa Rica [2023]</li>
+          <li>SoE fellowship from NYU [2021]</li>
+          <li>JEE Advanced All India Rank 48 [2017]</li>
+          <li>Pratibha Scholarship (Aditya Birla Group) [2017-21]</li>
+          <li>KVPY Fellowship and NTSE Scholarship [2016]</li>
+          <li>0.1% Certificate of Merit in Chemistry and Physics [AISSCE, 2017]</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</div>

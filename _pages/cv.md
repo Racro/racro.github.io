@@ -21,7 +21,6 @@ toc:
 
 - **B.Tech in Computer Science and Engineering** (2017 - 2021)
   - Indian Institute of Technology Bombay
-  - GPA: 8.15/10.0
 
 ## Research Experience
 - **Research Assistant** (2021 - Present)

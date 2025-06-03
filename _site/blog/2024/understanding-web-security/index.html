@@ -17,7 +17,7 @@
   
   
     
-      about | Ritik Roongta
+      Understanding Web Security: A Primer | Ritik Roongta
     
   
 </title>
@@ -60,7 +60,7 @@
   <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
 
 <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e">
-<link rel="canonical" href="http://localhost:4000/about/">
+<link rel="canonical" href="http://localhost:4000/blog/2024/understanding-web-security/">
 
 <!-- Dark Mode -->
 <script src="/assets/js/theme.js?d729706c33a9e5124e1978edd554d222"></script>
@@ -107,7 +107,7 @@
 
           <!-- About -->
           <li class="nav-item ">
-            <a class="nav-link" href="/">
+            <a class="nav-link" href="/">about
               
             </a>
           </li>
@@ -216,10 +216,18 @@
             
           
             
+          
+            
+          
+            
+          
+            
+          
+            
               
                 
                 <li class="nav-item active">
-                  <a class="nav-link" href="/about/">about
+                  <a class="nav-link" href="/blog/">blog
                     
                       <span class="sr-only">(current)</span>
                     
@@ -232,41 +240,7 @@
               
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="/blog/">blog
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-              
-                
-                <li class="nav-item ">
                   <a class="nav-link" href="/cv/">cv
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/projects/">projects
                     
                   </a>
                 </li>
@@ -287,39 +261,6 @@
             
               
                 
-                <li class="nav-item ">
-                  <a class="nav-link" href="/repositories/">repositories
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/teaching/">teaching
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/people/">people
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-                
                 
                 <li class="nav-item dropdown ">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">submenus
@@ -331,26 +272,10 @@
                         <a class="dropdown-item " href="/books/">bookshelf</a>
                       
                     
-                      
-                        <div class="dropdown-divider"></div>
-                      
-                    
-                      
-                        <a class="dropdown-item " href="/blog/">blog</a>
-                      
-                    
                   </div>
                 </li>
               
             
-          
-          
-            <!-- Search -->
-            <li class="nav-item">
-              <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
-              </button>
-            </li>
           
           
             <!-- Toogle theme mode -->
@@ -382,76 +307,176 @@
       
         
 
+
+
+
+
+
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title">about</h1>
-    <p class="post-description"></p>
+    <h1 class="post-title">Understanding Web Security: A Primer</h1>
+    <p class="post-meta">
+      Created on March 14, 2024
+      
+      
+      
+    </p>
+    <p class="post-tags">
+      
+        <a href="/blog/2024"> <i class="fa-solid fa-calendar fa-sm"></i> 2024 </a>
+      
+      
+          ·  
+        
+          
+            <a href="/blog/tag/security"> <i class="fa-solid fa-hashtag fa-sm"></i> security</a>
+          
+          
+             
+          
+        
+          
+            <a href="/blog/tag/web"> <i class="fa-solid fa-hashtag fa-sm"></i> web</a>
+          
+          
+             
+          
+        
+          
+            <a href="/blog/tag/tutorial"> <i class="fa-solid fa-hashtag fa-sm"></i> tutorial</a>
+          
+          
+        
+      
+
+      
+          ·  
+        
+          
+            <a href="/blog/category/blog"> <i class="fa-solid fa-tag fa-sm"></i> blog</a>
+          
+          
+        
+      
+    </p>
   </header>
 
-  <article>
-    <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="/assets/img/ritik.jpeg" alt="" title="profile picture">
-    </div>
-</div>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p>Web security is a crucial aspect of modern computing. In this post, I’ll discuss some fundamental concepts and common vulnerabilities in web applications.</p>
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <p>
-            I am a Ph.D. student in the Computer Science Department at NYU Tandon School of Engineering.
-        </p>
-        <p>
-            My research interests lie in the intersection of computer security and systems, with a particular focus on:
-            </p>
+<h2 id="common-web-vulnerabilities">Common Web Vulnerabilities</h2>
+
+<ol>
+  <li>
+<strong>Cross-Site Scripting (XSS)</strong>
+    <ul>
+      <li>Allows attackers to inject malicious scripts into web pages</li>
+      <li>Can be prevented through proper input validation and output encoding</li>
+    </ul>
+  </li>
+  <li>
+<strong>Cross-Site Request Forgery (CSRF)</strong>
+    <ul>
+      <li>Tricks users into performing unwanted actions</li>
+      <li>Mitigated using CSRF tokens and SameSite cookies</li>
+    </ul>
+  </li>
+  <li>
+<strong>SQL Injection</strong>
+    <ul>
+      <li>Occurs when user input is directly used in database queries</li>
+      <li>Prevented through prepared statements and input validation</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="best-practices">Best Practices</h2>
+
 <ul>
-                <li>Web Security</li>
-                <li>Program Analysis</li>
-                <li>Fuzzing</li>
-                <li>Privacy</li>
-            </ul>
-        
+  <li>Always validate and sanitize user input</li>
+  <li>Use HTTPS for all communications</li>
+  <li>Implement proper authentication and authorization</li>
+  <li>Keep all dependencies updated</li>
+  <li>Follow the principle of least privilege</li>
+</ul>
+
+<p>Stay tuned for more detailed posts about each of these topics!</p>
+
     </div>
-</div>
-
-<hr>
-<p>layout: about
-title: about
-permalink: /
-subtitle: <a href="#">Affiliations</a>. Address. Contacts. Motto. Etc.</p>
-
-<p>profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: &gt;
-    &lt;p&gt;555 your office number&lt;/p&gt;
-    &lt;p&gt;123 your address street&lt;/p&gt;
-    &lt;p&gt;Your City, State 12345&lt;/p&gt;</p>
-
-<p>selected_papers: true # includes a list of papers marked as “selected={true}”
-social: true # includes social icons at the bottom of the page</p>
-
-<p>announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the <code class="language-plaintext highlighter-rouge">_news</code> folder</p>
-
-<p>latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
-—</p>
-
-<p>Write your biography here. Tell the world about yourself. Link to your favorite <a href="http://reddit.com" rel="external nofollow noopener" target="_blank">subreddit</a>. You can put a picture in, too. The code is already in, just name your picture <code class="language-plaintext highlighter-rouge">prof_pic.jpg</code> and put it in the <code class="language-plaintext highlighter-rouge">img/</code> folder.</p>
-
-<p>Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing <code class="language-plaintext highlighter-rouge">profile</code> property of the YAML header of your <code class="language-plaintext highlighter-rouge">_pages/about.md</code>. Edit <code class="language-plaintext highlighter-rouge">_bibliography/papers.bib</code> and Jekyll will render your <a href="/al-folio/publications/">publications page</a> automatically.</p>
-
-<p>Link to your social media connections, too. This theme is set up to use <a href="https://fontawesome.com/" rel="external nofollow noopener" target="_blank">Font Awesome icons</a> and <a href="https://jpswalsh.github.io/academicons/" rel="external nofollow noopener" target="_blank">Academicons</a>, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.</p>
-
   </article>
 
   
 
+  
+
+  
+    
+      
+
+  
+    
+    <br>
+    <hr>
+    <br>
+    <ul class="list-disc pl-8"></ul>
+
+    <!-- Adds related posts to the end of an article -->
+    <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
+    <p class="mb-2">Here are some more articles you might like to read next:</p>
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/" target="_blank" rel="external nofollow noopener">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</a>
+      <svg width="1rem" height="1rem" viewbox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2" target="_blank" rel="external nofollow noopener">Displaying External Posts on Your al-folio Blog</a>
+      <svg width="1rem" height="1rem" viewbox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/plotly/">a post with plotly.js</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/photo-gallery/">a post with image galleries</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/tabs/">a post with tabs</a>
+    
+  </li>
+
+
+
+    
+  
+
+  
   
 </div>
 
@@ -472,7 +497,7 @@ social: true # includes social icons at the bottom of the page</p>
 
   
   
-    Last updated: June 02, 2025.
+    Last updated: June 03, 2025.
   
 
     </div>

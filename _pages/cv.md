@@ -12,9 +12,7 @@ toc:
 ---
 
 ## Download CV
-- [Full CV](/assets/pdf/CV.pdf)
-- [Quad CV](/assets/pdf/CV_Quad.pdf)
-- [Detailed CV](/assets/pdf/CV_Ritik.pdf)
+- [Full CV](/assets/pdf/CV_05_29.pdf)
 
 ## Education
 - **Ph.D. in Computer Science** (2021 - Present)
@@ -23,7 +21,7 @@ toc:
 
 - **B.Tech in Computer Science and Engineering** (2017 - 2021)
   - Indian Institute of Technology Bombay
-  - GPA: 9.2/10.0
+  - GPA: 8.15/10.0
 
 ## Research Experience
 - **Research Assistant** (2021 - Present)

@@ -33,16 +33,16 @@ I received my B.Tech in Computer Science and Engineering from the Indian Institu
 
 My current research focuses on developing automated techniques for analyzing and improving web security, with a particular emphasis on privacy-preserving technologies and program analysis. I am passionate about making the web a safer place for everyone.
 
----
+<!-- ---
 layout: page
 permalink: /about/
 title: about
 description: 
 nav: true
 nav_order: 1
----
+--- -->
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/ritik.jpeg' | relative_url }}" alt="" title="profile picture"/>
     </div>
@@ -63,9 +63,9 @@ nav_order: 1
             </ul>
         </p>
     </div>
-</div>
+</div> -->
 
----
+<!-- ---
 layout: about
 title: about
 permalink: /
@@ -98,4 +98,4 @@ Write your biography here. Tell the world about yourself. Link to your favorite 
 
 Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->

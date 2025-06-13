@@ -9,7 +9,7 @@ layout: default
       {% if page.cv_pdf %}
         <a
           {% if page.cv_pdf contains '://' %}
-            href="{{ page.cv_pdf }}"
+            href="{{ page.cv_05_29_pdf }}"
           {% else %}
             href="{{ page.cv_05_29_pdf | prepend: 'assets/CV/' | relative_url }}"
           {% endif %}

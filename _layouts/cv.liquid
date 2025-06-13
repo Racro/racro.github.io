@@ -6,12 +6,12 @@ layout: default
   <header class="post-header">
     <h1 class="post-title">
       {{ page.title }}
-      {% if page.cv_05_29_pdf %}
+      {% if page.cv_pdf %}
         <a
           {% if page.cv_pdf contains '://' %}
-            href="{{ page.cv_05_29_pdf }}"
+            href="{{ page.cv_pdf }}"
           {% else %}
-            href="{{ page.cv_05_29_pdf | prepend: 'assets/CV/' | relative_url }}"
+            href="{{ page.cv_pdf | relative_url }}"
           {% endif %}
           target="_blank"
           rel="noopener noreferrer"
@@ -47,11 +47,11 @@ layout: default
         <ul>
           <li>
             <strong>Ph.D. in Computer Science</strong>, New York University, Advisor: Prof. R. Greenstadt & Prof. BD. Gavitt, 
-            New York City, USA (Sep ’21 – May ’26)
-            <br>Thesis: Adblocking’s Privacy Tradeoffs and the Future of Sustainable Advertising
+            New York City, USA (Sep '21 – May '26)
+            <br>Thesis: Adblocking's Privacy Tradeoffs and the Future of Sustainable Advertising
           </li>
           <li>
-            <strong>B.Tech in Computer Science</strong>, Indian Institute of Technology Bombay, Mumbai, India (Sep ’17 – May ’21)
+            <strong>B.Tech in Computer Science</strong>, Indian Institute of Technology Bombay, Mumbai, India (Sep '17 – May '21)
             <br>Thesis: Large-scale assessment of vulnerabilities in open-source network server binaries
           </li>
         </ul>
@@ -61,11 +61,11 @@ layout: default
       <div class="card mt-3 p-3">
         <h3 class="card-title font-weight-medium">Selected Publications</h3>
         <ul>
-          <li><strong>PETS ’25:</strong> Automated detection and evaluation of problematic ‘allowed’ advertisements (w/ Julia Jose, Hussam Habib, Rachel Greenstadt) [<a href="/papers/Accads_PETS.pdf">Paper</a>] [<a href="/posters/Accads_poster.pdf">Poster</a>] [<a href="https://github.com/Racro/AcceptableAds_PETS.git">Code</a>]</li>
-          <li><strong>EMNLP ’25 (under review):</strong> Propaganda Generation by Large Language Models (w/ Julia Jose, Rachel Greenstadt) [<a href="/posters/Propaganda_poster.pdf">Poster</a>]</li>
-          <li><strong>AsiaCCS ’24:</strong> User-Focused Evaluation of Privacy-Preserving Browser Extensions (w/ Rachel Greenstadt) [<a href="/papers/UserFocusedEvaluation_AsiaCCS.pdf">Paper</a>] [<a href="https://github.com/Racro/measurements_user-concerns.git">Code</a>]</li>
-          <li><strong>SecWeb, IEEE S&P ’24:</strong> Analysis of web breakages caused by adblockers (w/ Mitchell Zhou, Ben Stock, Rachel Greenstadt) [<a href="/papers/secweb_breakages.pdf">Paper</a>] [<a href="https://github.com/Mitchellzhou1/Ad-BlockerResearch.git">Code</a>]</li>
-          <li><strong>USENIX ’22:</strong> Drifuzz: Harvesting Bugs in Device Drivers from Golden Seeds (w/ Zekun Shen, Brendan Dolan-Gavitt) [<a href="/papers/Drifuzz_usenix.pdf">Paper</a>] [<a href="https://github.com/messlabnyu/DrifuzzProject.git">Code</a>]</li>
+          <li><strong>PETS '25:</strong> Automated detection and evaluation of problematic 'allowed' advertisements (w/ Julia Jose, Hussam Habib, Rachel Greenstadt) [<a href="/papers/Accads_PETS.pdf">Paper</a>] [<a href="/posters/Accads_poster.pdf">Poster</a>] [<a href="https://github.com/Racro/AcceptableAds_PETS.git">Code</a>]</li>
+          <li><strong>EMNLP '25 (under review):</strong> Propaganda Generation by Large Language Models (w/ Julia Jose, Rachel Greenstadt) [<a href="/posters/Propaganda_poster.pdf">Poster</a>]</li>
+          <li><strong>AsiaCCS '24:</strong> User-Focused Evaluation of Privacy-Preserving Browser Extensions (w/ Rachel Greenstadt) [<a href="/papers/UserFocusedEvaluation_AsiaCCS.pdf">Paper</a>] [<a href="https://github.com/Racro/measurements_user-concerns.git">Code</a>]</li>
+          <li><strong>SecWeb, IEEE S&P '24:</strong> Analysis of web breakages caused by adblockers (w/ Mitchell Zhou, Ben Stock, Rachel Greenstadt) [<a href="/papers/secweb_breakages.pdf">Paper</a>] [<a href="https://github.com/Mitchellzhou1/Ad-BlockerResearch.git">Code</a>]</li>
+          <li><strong>USENIX '22:</strong> Drifuzz: Harvesting Bugs in Device Drivers from Golden Seeds (w/ Zekun Shen, Brendan Dolan-Gavitt) [<a href="/papers/Drifuzz_usenix.pdf">Paper</a>] [<a href="https://github.com/messlabnyu/DrifuzzProject.git">Code</a>]</li>
         </ul>
       </div>
 
@@ -86,26 +86,26 @@ layout: default
       <div class="card mt-3 p-3">
         <h3 class="card-title font-weight-medium">Internship Experience</h3>
         <ul>
-          <li><strong>CISPA Helmholtz Center</strong> (Jun – Aug ’24), Saarbruecken, Germany — Developed mechanisms to identify differential adblocker treatment, instrumented V8 engine to collect JS logs.</li>
-          <li><strong>University of California, Santa Barbara</strong> (Apr – Nov ’20) — Developed KANF, a kernel-assisted network fuzzer; integrated with AFL.</li>
-          <li><strong>A.P.T Portfolio</strong> (Apr – Jun ’20) — Patched crucial bugs, developed dynamic latency-based exchange simulation model.</li>
-          <li><strong>Lucideus</strong> (May – Jul ’19) — Hardened CentOS Linux using 239 remediations, documented OWASP Top 10 attacks.</li>
+          <li><strong>CISPA Helmholtz Center</strong> (Jun – Aug '24), Saarbruecken, Germany — Developed mechanisms to identify differential adblocker treatment, instrumented V8 engine to collect JS logs.</li>
+          <li><strong>University of California, Santa Barbara</strong> (Apr – Nov '20) — Developed KANF, a kernel-assisted network fuzzer; integrated with AFL.</li>
+          <li><strong>A.P.T Portfolio</strong> (Apr – Jun '20) — Patched crucial bugs, developed dynamic latency-based exchange simulation model.</li>
+          <li><strong>Lucideus</strong> (May – Jul '19) — Hardened CentOS Linux using 239 remediations, documented OWASP Top 10 attacks.</li>
         </ul>
       </div>
 
       <!-- Reviewer Duties -->
       <div class="card mt-3 p-3">
         <h3 class="card-title font-weight-medium">Reviewer Duties</h3>
-        <p>Program Committee: NDSS ’25, PETS ’24, MADWEB ’25; Artifact Committee: CCS ’24/25, USENIX ’23/24, PETS ’25</p>
+        <p>Program Committee: NDSS '25, PETS '24, MADWEB '25; Artifact Committee: CCS '24/25, USENIX '23/24, PETS '25</p>
       </div>
 
       <!-- Positions of Responsibility -->
       <div class="card mt-3 p-3">
         <h3 class="card-title font-weight-medium">Position of Responsibility</h3>
         <ul>
-          <li>General Secretary, IIT Bombay CSE Association (Jul ’20 – May ’21) — Led team of 24+ students for organizing events and wellness webinars.</li>
-          <li>Teaching Assistant, NYU Application Security (Jan ’22 – Apr ’22) — Mentored 100+ students, facilitated practical demonstrations.</li>
-          <li>Thesis Mentor, NYU (Sept ’23 – May ’24) — Mentored undergraduate thesis on web breakages, leading to publication at SecWeb IEEE S&P.</li>
+          <li>General Secretary, IIT Bombay CSE Association (Jul '20 – May '21) — Led team of 24+ students for organizing events and wellness webinars.</li>
+          <li>Teaching Assistant, NYU Application Security (Jan '22 – Apr '22) — Mentored 100+ students, facilitated practical demonstrations.</li>
+          <li>Thesis Mentor, NYU (Sept '23 – May '24) — Mentored undergraduate thesis on web breakages, leading to publication at SecWeb IEEE S&P.</li>
         </ul>
       </div>
 

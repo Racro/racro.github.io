@@ -5,14 +5,14 @@ title: cv
 description: 
 nav: true
 nav_order: 2
-cv_pdf: CV.pdf
+cv_pdf: assets/CV/CV_05_29.pdf
 description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
 toc:
   sidebar: left
 ---
 
 ## Download CV
-- [Full CV](/assets/pdf/CV_05_29.pdf)
+- [Full CV](/assets/CV/CV_05_29.pdf)
 
 ## Education
 - **Ph.D. in Computer Science** (2021 - Present)

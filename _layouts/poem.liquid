@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="poem-reading">
+  <article class="poem-content">
+    <header class="poem-header">
+      <h1 class="poem-title">{{ page.title }}</h1>
+      {% if page.note %}
+        <p class="poem-note">{{ page.note }}</p>
+      {% endif %}
+      {% if page.year %}
+        <span class="poem-year">{{ page.year }}</span>
+      {% endif %}
+    </header>
+
+    <div class="poem-body">
+      {{ content }}
+    </div>
+
+    <nav class="poem-nav">
+      <a href="{{ '/poems/' | relative_url }}" class="back-link">← कविताओं पर वापस जाएँ</a>
+    </nav>
+  </article>
+</div>

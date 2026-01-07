@@ -156,6 +156,9 @@ collections:
     output: true
   projects:
     output: true
+  poems:
+    output: true
+    permalink: /poems/:title/
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -444,7 +447,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600&family=Literata:opsz,wght@7..72,400;500;600;700&family=Roboto:wght@300;400;500;700&family=Material+Icons&display=swap"
   highlightjs:
     integrity:
       css:
@@ -645,3 +648,4 @@ jsonresume:
   - languages
   - interests
   - references
+

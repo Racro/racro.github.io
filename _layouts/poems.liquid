@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="poems-archive">
+  <header class="poems-header">
+    <h1 class="poems-title">कविताएँ</h1>
+  </header>
+
+  <div class="poems-grid">
+    {% assign sorted_poems = site.poems | sort: 'order' %}
+    {% for poem in sorted_poems %}
+      <a href="{{ poem.url | relative_url }}" class="poem-card">
+        <h2 class="poem-card-title">{{ poem.title }}</h2>
+        <p class="poem-card-note">{{ poem.note }}</p>
+        <span class="poem-card-year">{{ poem.year }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</div>

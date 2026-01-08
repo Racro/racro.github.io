@@ -1,0 +1,12 @@
+# Cloudflare Worker Configuration
+# Copy this file to wrangler.toml and fill in your values
+
+name = "comments-worker"
+main = "comments.js"
+compatibility_date = "2024-01-01"
+
+# KV Namespace binding
+[[kv_namespaces]]
+binding = "COMMENTS_KV"
+id = "07fbbf326b594ff2a40b2ad20c7bc2b3"
+

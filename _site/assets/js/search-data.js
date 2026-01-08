@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -65,7 +65,77 @@ ninja.data = [{
           section: "News",},{id: "news-presented-a-poster-on-problematic-content-in-acceptable-ads-at-google-ad-privacy-day-in-san-francisco",
           title: 'Presented a poster on problematic content in Acceptable Ads at Google Ad Privacy...',
           description: "",
-          section: "News",},{id: "projects-project-1",
+          section: "News",},{id: "poems-दिवाली",
+          title: 'दिवाली',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/diwali/";
+            },},{id: "poems-एक-शख़्स",
+          title: 'एक शख़्स',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/ek-shaqs/";
+            },},{id: "poems-इंस्टी-तुम्हे-बुलाता-हूँ",
+          title: 'इंस्टी तुम्हे बुलाता हूँ',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/insti-bulata-hoon/";
+            },},{id: "poems-ख्वाब-लग-रही-हो",
+          title: 'ख्वाब लग रही हो',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/khwaab-lag-rhi-ho/";
+            },},{id: "poems-लहर",
+          title: 'लहर',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/leher/";
+            },},{id: "poems-मुस्कुरा-दोगी-क्या",
+          title: 'मुस्कुरा दोगी क्या?',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/muskura-dogi-kya/";
+            },},{id: "poems-पहले-प्यार-की-कहानी",
+          title: 'पहले प्यार की कहानी',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/pehle-pyaar-ki-kahani/";
+            },},{id: "poems-प्यार-हो-रहा-है",
+          title: 'प्यार हो रहा है',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/pyaar-ho-raha-hai/";
+            },},{id: "poems-क्वारंटाइन-quarantine",
+          title: 'क्वारंटाइन (quarantine)',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/quarantine/";
+            },},{id: "poems-सपने",
+          title: 'सपने',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/sapne/";
+            },},{id: "poems-टूटे-दिल-से",
+          title: 'टूटे दिल से',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/toote-dil-se/";
+            },},{id: "poems-तुम",
+          title: 'तुम',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/tum/";
+            },},{id: "poems-तुम्हारा-बस-खयाल-है",
+          title: 'तुम्हारा बस खयाल है',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/tumhara-bas-khayal-hai/";
+            },},{id: "poems-यादों-में-आ-गए",
+          title: 'यादों में आ गए',
+          description: "",
+          section: "Poems",handler: () => {
+              window.location.href = "/poems/yaadon-mein-aa-gye/";
+            },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
           section: "Projects",handler: () => {

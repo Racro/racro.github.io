@@ -2,19 +2,60 @@
 layout: default
 ---
 
-<div class="poems-archive">
+<main class="poems-archive" role="main">
   <header class="poems-header">
-    <h1 class="poems-title">कविताएँ</h1>
+    <h1 class="poems-title">मेरी कलम से</h1>
   </header>
 
   <div class="poems-grid">
     {% assign sorted_poems = site.poems | sort: 'order' %}
     {% for poem in sorted_poems %}
-      <a href="{{ poem.url | relative_url }}" class="poem-card">
+      <article class="poem-card-wrapper">
+        <a href="{{ poem.url | relative_url }}" class="poem-card" aria-label="{{ poem.title }}">
+          {% if poem.image %}
+            <img src="{{ poem.image | relative_url }}" alt="{{ poem.title }}" class="poem-card-image" loading="lazy">
+          {% else %}
+            <div class="poem-card-image"></div>
+          {% endif %}
+          <div class="poem-card-content">
         <h2 class="poem-card-title">{{ poem.title }}</h2>
         <p class="poem-card-note">{{ poem.note }}</p>
-        <span class="poem-card-year">{{ poem.year }}</span>
+            <time class="poem-card-year" datetime="{{ poem.year }}">{{ poem.year }}</time>
+          </div>
       </a>
+      </article>
     {% endfor %}
   </div>
-</div>
+</main>
+
+<style>
+  /* Subtle fade-in animation for cards */
+  .poem-card-wrapper {
+    animation: fadeInUp 0.5s ease-out backwards;
+  }
+  
+  {% for i in (1..12) %}
+  .poem-card-wrapper:nth-child({{ i }}) {
+    animation-delay: {{ i | minus: 1 | times: 0.05 }}s;
+  }
+  {% endfor %}
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .poem-card-wrapper {
+      animation: none;
+    }
+  }
+</style>
+
+<script src="{{ '/assets/js/poems.js' | relative_url }}" defer></script>

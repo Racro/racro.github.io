@@ -2,24 +2,54 @@
 layout: default
 ---
 
-<div class="poem-reading">
-  <article class="poem-content">
+<main class="poem-reading" role="main">
+  <article class="poem-content" itemscope itemtype="http://schema.org/CreativeWork">
     <header class="poem-header">
-      <h1 class="poem-title">{{ page.title }}</h1>
+      <h1 class="poem-title" itemprop="name">{{ page.title }}</h1>
       {% if page.note %}
-        <p class="poem-note">{{ page.note }}</p>
+        <p class="poem-note" itemprop="description">{{ page.note }}</p>
       {% endif %}
       {% if page.year %}
-        <span class="poem-year">{{ page.year }}</span>
+        <time class="poem-year" datetime="{{ page.year }}" itemprop="dateCreated">{{ page.year }}</time>
       {% endif %}
     </header>
 
-    <div class="poem-body">
+    <div class="poem-body" itemprop="text">
       {{ content }}
     </div>
 
-    <nav class="poem-nav">
-      <a href="{{ '/poems/' | relative_url }}" class="back-link">← कविताओं पर वापस जाएँ</a>
+    {% if site.cloudflare_comments_enabled and page.comments != false %}
+      {% include comments-cloudflare.liquid %}
+    {% endif %}
+
+    <nav class="poem-nav" aria-label="पृष्ठ नेविगेशन">
+      <a href="{{ '/poems/' | relative_url }}" class="back-link" rel="prev">
+        back
+      </a>
     </nav>
   </article>
-</div>
+</main>
+
+<style>
+  /* Subtle fade-in animation for poem content */
+  .poem-content {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .poem-content {
+      animation: none;
+    }
+  }
+</style>
+
+<script src="{{ '/assets/js/poems.js' | relative_url }}" defer></script>

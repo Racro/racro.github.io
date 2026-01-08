@@ -1,7 +1,7 @@
 ---
 layout: poems
-title: कविताएँ
+title: writings
 permalink: /poems/
-nav: true
+nav: false
 nav_order: 5
 ---

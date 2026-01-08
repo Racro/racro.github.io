@@ -2,104 +2,194 @@
 // Poems - Classical Devanagari Archive Aesthetic
 // -----------------------------------------------------------------------------
 
-// Import Devanagari serif font from Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
+// Typography: Noto Serif Devanagari for elegant, book-like reading
+// Already imported in _config.yml Google Fonts
 
 // -----------------------------------------------------------------------------
 // Archive Overview (Grid)
 // -----------------------------------------------------------------------------
 
 .poems-archive {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0 6rem 0;
+  min-height: 100vh;
+  
+  @media (max-width: 768px) {
+    padding: 2rem 0 4rem 0;
+  }
+  
+  @media (max-width: 640px) {
+    padding: 2rem 0 4rem 0;
+  }
 }
 
 .poems-header {
   text-align: center;
   margin-bottom: 4rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+  }
 }
 
 .poems-title {
-  font-family: 'Tiro Devanagari Hindi', serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  color: #2a2a2a;
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
   margin: 0;
+  line-height: 1.2;
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 1.5rem auto 0;
+    background: var(--global-theme-color);
+    opacity: 0.8;
+    border-radius: 2px;
+  }
 }
 
 .poems-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  width: 100%;
+  padding: 0 var(--global-content-padding, 2rem);
   
   @media (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
   
-  @media (max-width: 600px) {
+  // Only on phones: single column
+  @media (max-width: 640px) {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
+    padding: 0 var(--global-content-padding, 1.5rem);
   }
+}
+
+// Blog hub: 2 large tiles (poems + treks)
+.blog-hub .poems-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 640px) {
+  .blog-hub .poems-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.poem-card-wrapper {
+  // Container for animation; actual card styling is on .poem-card
+  position: relative;
+  
+  // Staggered entrance animation handled in layout
 }
 
 .poem-card {
-  display: block;
-  padding: 2rem 1.5rem;
-  background: #faf8f3;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
   text-decoration: none;
   color: inherit;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--global-bg-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
   
   &:hover,
   &:focus {
-    transform: translateY(3px);
-    border-color: rgba(0, 0, 0, 0.25);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.1);
     outline: none;
     
-    .poem-card-title {
-      color: #1a1a1a;
+    .poem-card-image {
+      transform: scale(1.08);
+      filter: brightness(0.95);
     }
   }
   
-  &:focus-visible {
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+  &:active {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
   }
 }
 
+.poem-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--global-divider-color);
+  display: block;
+}
+
+.poem-card-content {
+  padding: 2rem 2rem 1.75rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
 .poem-card-title {
-  font-family: 'Tiro Devanagari Hindi', serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #3a3a3a;
-  margin: 0 0 1rem 0;
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.65rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
   transition: color 0.2s ease;
+  letter-spacing: -0.015em;
+  
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+  
+  @media (max-width: 640px) {
+    font-size: 1.35rem;
+  }
 }
 
 .poem-card-note {
-  font-family: 'Tiro Devanagari Hindi', serif;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: #666;
-  margin: 0 0 1.5rem 0;
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  opacity: 0.7;
+  margin: 0;
+  flex-grow: 1;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 640px) {
+    font-size: 0.95rem;
+  }
 }
 
 .poem-card-year {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
-  color: #999;
-  opacity: 0.7;
+  font-family: 'Literata', Georgia, serif;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  opacity: 0.45;
+  margin-top: 0.5rem;
+  font-variant-numeric: oldstyle-nums;
+  text-transform: uppercase;
+  font-weight: 500;
+  
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
 }
 
 // -----------------------------------------------------------------------------
@@ -107,113 +197,460 @@
 // -----------------------------------------------------------------------------
 
 .poem-reading {
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 4rem 2rem 6rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 4rem clamp(2rem, 8vw, 12rem) 6rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   
   @media (max-width: 768px) {
-    padding: 3rem 1.5rem 4rem;
+    padding: 3rem 2rem 4rem;
+  }
+  
+  @media (max-width: 640px) {
+    padding: 2.5rem 1.5rem 3.5rem;
   }
 }
 
 .poem-content {
-  font-family: 'Tiro Devanagari Hindi', serif;
+  font-family: 'Noto Serif Devanagari', serif;
+  padding: 4rem 3.5rem;
+  position: relative;
+  max-width: 750px;
+  width: 100%;
+  background: var(--global-bg-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  
+  @media (max-width: 768px) {
+    padding: 3rem 2.5rem;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 640px) {
+    padding: 2.5rem 2rem;
+    border-radius: 6px;
+  }
 }
 
 .poem-header {
   text-align: center;
   margin-bottom: 4rem;
   padding-bottom: 2.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  position: relative;
+  border-bottom: 1px solid var(--global-divider-color);
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--global-theme-color);
+    opacity: 0.6;
+    border-radius: 2px;
+  }
+  
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .poem-title {
-  font-family: 'Tiro Devanagari Hindi', serif;
-  font-size: 2.2rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #2a2a2a;
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 2.75rem;
+  font-weight: 600;
+  line-height: 1.3;
   margin: 0 0 1.5rem 0;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.015em;
+  
+  @media (max-width: 768px) {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+  }
 }
 
 .poem-note {
-  font-family: 'Tiro Devanagari Hindi', serif;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #666;
-  font-style: italic;
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
   margin: 0 0 1rem 0;
+  font-style: italic;
+  opacity: 0.7;
+  
+  @media (max-width: 768px) {
+    font-size: 1.05rem;
+  }
 }
 
 .poem-year {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  color: #999;
+  font-family: 'Literata', Georgia, serif;
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
   display: block;
-  opacity: 0.6;
+  opacity: 0.45;
+  font-variant-numeric: oldstyle-nums;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .poem-body {
-  font-family: 'Tiro Devanagari Hindi', serif;
-  font-size: 1.3rem;
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.35rem;
   line-height: 2.2;
-  color: #3a3a3a;
+  position: relative;
+  font-weight: 400;
   
   p {
     margin: 0 0 2rem 0;
     white-space: pre-line;
   }
   
-  // Stanza separation
+  // Generous stanza separation
   p + p {
-    margin-top: 2.5rem;
+    margin-top: 2.75rem;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    line-height: 2;
+    
+    p {
+      margin-bottom: 1.75rem;
+    }
+    
+    p + p {
+      margin-top: 2.25rem;
+    }
   }
 }
 
-.poem-nav {
-  margin-top: 5rem;
+.poem-comments {
+  margin-top: 3.5rem;
   padding-top: 2.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid var(--global-divider-color);
+  max-width: 750px;
+}
+
+.reactions-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.reaction-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--global-text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover:not(:disabled) {
+    border-color: var(--global-theme-color);
+    background: rgba(var(--global-theme-color-rgb), 0.05);
+    transform: translateY(-2px);
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  &.reaction-active {
+    background: rgba(var(--global-theme-color-rgb), 0.1);
+    border-color: var(--global-theme-color);
+    animation: reactionPulse 0.3s ease;
+  }
+}
+
+.reaction-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.reaction-count {
+  font-weight: 600;
+  font-size: 0.95rem;
+  opacity: 1;
+  min-width: 1.5em;
   text-align: center;
 }
 
-.back-link {
-  font-family: 'Tiro Devanagari Hindi', serif;
+@keyframes reactionPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.comments-title {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
+  color: var(--global-text-color);
+}
+
+.comments-list {
+  margin-bottom: 3rem;
+}
+
+.comments-loading,
+.comments-empty,
+.comments-error {
+  font-style: italic;
+  opacity: 0.7;
+  padding: 1rem 0;
+}
+
+.comment-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+}
+
+.comment-author {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--global-text-color);
+}
+
+.comment-date {
+  font-size: 0.8125rem;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.comment-body {
+  font-family: 'Noto Serif Devanagari', serif;
   font-size: 0.95rem;
-  color: #666;
+  line-height: 1.7;
+  color: var(--global-text-color);
+  opacity: 0.9;
+}
+
+.comment-form {
+  margin-top: 2rem;
+}
+
+.comment-message {
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  
+  &.success {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+  }
+  
+  &.error {
+    background: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+    border: 1px solid rgba(244, 67, 54, 0.3);
+  }
+}
+
+.comment-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.comment-form-group {
+  margin-bottom: 1rem;
+}
+
+.comment-form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--global-text-color);
+  opacity: 0.8;
+}
+
+.comment-input,
+.comment-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  transition: border-color 0.2s ease;
+  
+  &:focus {
+    outline: none;
+    border-color: var(--global-theme-color);
+    box-shadow: 0 0 0 3px rgba(var(--global-theme-color-rgb), 0.1);
+  }
+  
+  &::placeholder {
+    opacity: 0.5;
+  }
+}
+
+.comment-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.comment-submit {
+  padding: 0.875rem 2rem;
+  background: var(--global-theme-color);
+  color: var(--global-bg-color);
+  border: none;
+  border-radius: 6px;
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--global-theme-color-rgb), 0.3);
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+// Keep giscus/disqus aligned to the reading column (for backward compatibility)
+.poem-comments #giscus_thread,
+.poem-comments #disqus_thread {
+  max-width: 750px;
+}
+
+.poem-nav {
+  margin-top: 4.5rem;
+  padding-top: 2.5rem;
+  text-align: center;
+  position: relative;
+  border-top: 1px solid var(--global-divider-color);
+  
+  @media (max-width: 768px) {
+    margin-top: 3.5rem;
+    padding-top: 2rem;
+  }
+}
+
+.back-link {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 0.95rem;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
   letter-spacing: 0.01em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  display: inline-block;
+  opacity: 0.7;
+  background: var(--global-divider-color);
   
   &:hover,
   &:focus {
-    color: #2a2a2a;
+    opacity: 1;
     outline: none;
+    background: var(--global-theme-color);
+    color: var(--global-bg-color);
+    transform: translateX(-4px);
   }
   
   &:focus-visible {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 4px;
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
   }
 }
+
+// Theme integration - use site's existing theme variables
 
 // -----------------------------------------------------------------------------
 // Theme adjustments
 // -----------------------------------------------------------------------------
 
-body.poems-view {
-  background: #faf8f3;
-}
-
 // Ensure proper rendering for Devanagari
 .poem-card-title,
 .poem-title,
 .poem-note,
-.poem-body {
+.poem-card-note,
+.poem-body,
+.back-link {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga", "calt";
+}
+
+// Print-friendly styles
+@media print {
+  .poems-archive,
+  .poem-reading {
+    padding: 1cm;
+  }
+  
+  .poem-content {
+    padding: 0;
+  }
+  
+  .poem-nav,
+  .back-link {
+    display: none;
+  }
+  
+  .poem-card {
+    page-break-inside: avoid;
+  }
+  
+  .poem-card-image {
+    page-break-after: avoid;
+  }
 }

@@ -107,11 +107,11 @@ related_blog_posts:
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:
-  repo: # <your-github-user-name>/<your-github-repo-name>
-  repo_id: # leave empty or specify your repo_id (see https://giscus.app/)
-  category: Comments # name of the category under which discussions will be created
-  category_id: # leave empty or specify your category_id (see https://giscus.app/)
-  mapping: title # identify discussions by post title
+  repo: Racro/racro.github.io
+  repo_id: MDEwOlJlcG9zaXRvcnkzNzc1NTAxNDM=
+  category: General # name of the category under which discussions will be created
+  category_id: DIC_kwDOFoD1P84C0teX
+  mapping: pathname # identify discussions by page pathname
   strict: 1 # use strict identification mode
   reactions_enabled: 1 # enable (1) or disable (0) emoji reactions
   input_position: bottom # whether to display input form below (bottom) or above (top) the comments
@@ -122,6 +122,10 @@ giscus:
 # Disqus comments (DEPRECATED)
 disqus_shortname: al-folio # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+
+# Cloudflare Workers Comments (Anonymous comments)
+cloudflare_comments_enabled: true
+cloudflare_worker_url: "https://comments-worker.roongta-ritik20.workers.dev"
 
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
@@ -228,6 +232,16 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: ""
+      type: "poems"
+    values:
+      disqus_comments: true
+  - scope:
+      path: ""
+      type: poems
+    values:
+      giscus_comments: true
 
 sass:
   style: compressed

@@ -478,13 +478,13 @@
         
         <h2 id="equations">Equations</h2>
 
-<p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/" rel="external nofollow noopener" target="_blank">MathJax 3</a> engine.
-You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>.
+<p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/" rel="external nofollow noopener" target="_blank">MathJax 3</a> engine.<br>
+You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>.<br>
 If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).</p>
 
 <p>In fact, you can also use a single dollar sign <code class="language-plaintext highlighter-rouge">$</code> to create inline formulas, such as <code class="language-plaintext highlighter-rouge">$ E = mc^2 $</code>, which will render as $ E = mc^2 $. This approach provides the same effect during TeX-based compilation, but visually it appears slightly less bold compared to double-dollar signs <code class="language-plaintext highlighter-rouge">$$</code>, making it blend more naturally with surrounding text.</p>
 
-<p>To use display mode, again surround your expression with <code class="language-plaintext highlighter-rouge">$$</code> and place it as a separate paragraph.
+<p>To use display mode, again surround your expression with <code class="language-plaintext highlighter-rouge">$$</code> and place it as a separate paragraph.<br>
 Here is an example:</p>
 
 \[\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)\]
@@ -495,29 +495,29 @@ Here is an example:</p>
 
 <h2 id="citations">Citations</h2>
 
-<p>Citations are then used in the article body with the <code class="language-plaintext highlighter-rouge">&lt;d-cite&gt;</code> tag.
-The key attribute is a reference to the id provided in the bibliography.
+<p>Citations are then used in the article body with the <code class="language-plaintext highlighter-rouge">&lt;d-cite&gt;</code> tag.<br>
+The key attribute is a reference to the id provided in the bibliography.<br>
 The key attribute can take multiple ids, separated by commas.</p>
 
-<p>The citation is presented inline like this: <d-cite key="gregor2015draw"></d-cite> (a number that displays more information on hover).
+<p>The citation is presented inline like this: <d-cite key="gregor2015draw"></d-cite> (a number that displays more information on hover).<br>
 If you have an appendix, a bibliography is automatically created and populated in it.</p>
 
-<p>Distill chose a numerical inline citation style to improve readability of citation dense articles and because many of the benefits of longer citations are obviated by displaying more information on hover.
+<p>Distill chose a numerical inline citation style to improve readability of citation dense articles and because many of the benefits of longer citations are obviated by displaying more information on hover.<br>
 However, we consider it good style to mention author last names if you discuss something at length and it fits into the flow well — the authors are human and it’s nice for them to have the community associate them with their work.</p>
 
 <hr>
 
 <h2 id="footnotes">Footnotes</h2>
 
-<p>Just wrap the text you would like to show up in a footnote in a <code class="language-plaintext highlighter-rouge">&lt;d-footnote&gt;</code> tag.
+<p>Just wrap the text you would like to show up in a footnote in a <code class="language-plaintext highlighter-rouge">&lt;d-footnote&gt;</code> tag.<br>
 The number of the footnote will be automatically generated.<d-footnote>This will become a hoverable footnote.</d-footnote></p>
 
 <hr>
 
 <h2 id="code-blocks">Code Blocks</h2>
 
-<p>Syntax highlighting is provided within <code class="language-plaintext highlighter-rouge">&lt;d-code&gt;</code> tags.
-An example of inline code snippets: <code class="language-plaintext highlighter-rouge">&lt;d-code language="html"&gt;let x = 10;&lt;/d-code&gt;</code>.
+<p>Syntax highlighting is provided within <code class="language-plaintext highlighter-rouge">&lt;d-code&gt;</code> tags.<br>
+An example of inline code snippets: <code class="language-plaintext highlighter-rouge">&lt;d-code language="html"&gt;let x = 10;&lt;/d-code&gt;</code>.<br>
 For larger blocks of code, add a <code class="language-plaintext highlighter-rouge">block</code> attribute:</p>
 
 <d-code block="" language="javascript">
@@ -550,7 +550,7 @@ For larger blocks of code, add a <code class="language-plaintext highlighter-rou
   <iframe src="/assets/plotly/demo.html" frameborder="0" scrolling="no" height="500px" width="100%" style="border: 1px dashed grey;"></iframe>
 </div>
 
-<p>The plot must be generated separately and saved into an HTML file.
+<p>The plot must be generated separately and saved into an HTML file.<br>
 To generate the plot that you see above, you can use the following code snippet:</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
@@ -1664,7 +1664,7 @@ index 5f6a9c3..b7d4e8f 100644
 
 <h2 id="layouts">Layouts</h2>
 
-<p>The main text column is referred to as the body.
+<p>The main text column is referred to as the body.<br>
 It is the assumed layout of any direct descendants of the <code class="language-plaintext highlighter-rouge">d-article</code> element.</p>
 
 <div class="fake-img l-body">
@@ -1677,7 +1677,7 @@ It is the assumed layout of any direct descendants of the <code class="language-
   <p>.l-page</p>
 </div>
 
-<p>All of these have an outset variant if you want to poke out from the body text a little bit.
+<p>All of these have an outset variant if you want to poke out from the body text a little bit.<br>
 For instance:</p>
 
 <div class="fake-img l-body-outset">
@@ -1688,8 +1688,8 @@ For instance:</p>
   <p>.l-page-outset</p>
 </div>
 
-<p>Occasionally you’ll want to use the full browser width.
-For this, use <code class="language-plaintext highlighter-rouge">.l-screen</code>.
+<p>Occasionally you’ll want to use the full browser width.<br>
+For this, use <code class="language-plaintext highlighter-rouge">.l-screen</code>.<br>
 You can also inset the element a little from the edge of the browser by using the inset variant.</p>
 
 <div class="fake-img l-screen">
@@ -1699,7 +1699,7 @@ You can also inset the element a little from the edge of the browser by using th
   <p>.l-screen-inset</p>
 </div>
 
-<p>The final layout is for marginalia, asides, and footnotes.
+<p>The final layout is for marginalia, asides, and footnotes.<br>
 It does not interrupt the normal flow of <code class="language-plaintext highlighter-rouge">.l-body</code> sized text except on mobile screen sizes.</p>
 
 <div class="fake-img l-gutter">
@@ -1720,17 +1720,17 @@ It does not interrupt the normal flow of <code class="language-plaintext highlig
 
 <ol>
   <li>First ordered list item</li>
-  <li>Another item
+  <li>Another item<br>
 ⋅⋅* Unordered sub-list.</li>
-  <li>Actual numbers don’t matter, just that it’s a number
+  <li>Actual numbers don’t matter, just that it’s a number<br>
 ⋅⋅1. Ordered sub-list</li>
   <li>And another item.</li>
 </ol>
 
 <p>⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we’ll use three here to also align the raw Markdown).</p>
 
-<p>⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+<p>⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅<br>
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅<br>
 ⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p>
 
 <ul>
@@ -1755,18 +1755,18 @@ It does not interrupt the normal flow of <code class="language-plaintext highlig
 
 <p>Or leave it empty and use the <a href="http://www.reddit.com" rel="external nofollow noopener" target="_blank">link text itself</a>.</p>
 
-<p>URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <a href="http://www.example.com" rel="external nofollow noopener" target="_blank">http://www.example.com</a> and sometimes
+<p>URLs and URLs in angle brackets will automatically get turned into links.<br>
+http://www.example.com or <a href="http://www.example.com" rel="external nofollow noopener" target="_blank">http://www.example.com</a> and sometimes<br>
 example.com (but not on Github, for example).</p>
 
 <p>Some text to show that the reference links can follow later.</p>
 
 <p>Here’s our logo (hover to see the title text):</p>
 
-<p>Inline-style:
+<p>Inline-style:<br>
 <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 1"></p>
 
-<p>Reference-style:
+<p>Reference-style:<br>
 <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 2"></p>
 
 <p>Inline <code class="language-plaintext highlighter-rouge">code</code> has <code class="language-plaintext highlighter-rouge">back-ticks around</code> it.</p>
@@ -1812,8 +1812,8 @@ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
   </tbody>
 </table>
 
-<p>There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don’t need to make the
+<p>There must be at least 3 dashes separating each header cell.<br>
+The outer pipes (|) are optional, and you don’t need to make the<br>
 raw Markdown line up prettily. You can also use inline Markdown.</p>
 
 <table>
@@ -1839,7 +1839,7 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
 </table>
 
 <blockquote>
-  <p>Blockquotes are very handy in email to emulate reply text.
+  <p>Blockquotes are very handy in email to emulate reply text.<br>
 This line is part of the same quote.</p>
 </blockquote>
 
@@ -1853,7 +1853,7 @@ This line is part of the same quote.</p>
 
 <p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
 
-<p>This line is also a separate paragraph, but…
+<p>This line is also a separate paragraph, but…<br>
 This line is only separated by a single newline, so it’s a separate line in the <em>same paragraph</em>.</p>
 
       </d-article>

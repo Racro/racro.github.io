@@ -57,7 +57,7 @@
 
 .poems-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   width: 100%;
   padding: 0 var(--global-content-padding, 2rem);
@@ -76,9 +76,9 @@
 
 // Blog hub: 2 large tiles (poems + treks)
 .blog-hub .poems-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
 @media (max-width: 640px) {
   .blog-hub .poems-grid {
     grid-template-columns: 1fr;
@@ -173,7 +173,7 @@
   }
   
   @media (max-width: 640px) {
-    font-size: 0.95rem;
+  font-size: 0.95rem;
   }
 }
 
@@ -305,28 +305,35 @@
   line-height: 2.2;
   position: relative;
   font-weight: 400;
-  white-space: pre-wrap;
+  
+  // Remove all default margins and padding
+  margin: 0;
+  padding: 0;
   
   p {
-    margin: 0 0 2rem 0;
-    white-space: pre-wrap;
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    display: block;
   }
   
-  // Generous stanza separation
+  // Stanza separation - slightly more spacing between paragraphs
   p + p {
-    margin-top: 2.75rem;
+    margin-top: 1.25rem;
+    padding-top: 0;
+  }
+  
+  // Handle line breaks within stanzas (from hard_wrap)
+  br {
+    line-height: inherit;
   }
   
   @media (max-width: 768px) {
     font-size: 1.2rem;
     line-height: 2;
     
-    p {
-      margin-bottom: 1.75rem;
-    }
-    
     p + p {
-      margin-top: 2.25rem;
+      margin-top: 1rem;
     }
   }
 }

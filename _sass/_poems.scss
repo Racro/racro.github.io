@@ -305,10 +305,11 @@
   line-height: 2.2;
   position: relative;
   font-weight: 400;
+  white-space: pre-wrap;
   
   p {
     margin: 0 0 2rem 0;
-    white-space: pre-line;
+    white-space: pre-wrap;
   }
   
   // Generous stanza separation

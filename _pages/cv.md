@@ -31,6 +31,11 @@ toc:
   - NYU Tandon School of Engineering
   - Courses: Computer Security, Operating Systems
 
+## Selected Publications
+- **CCS '26**: AdLens: Efficient Detection of Deceptive Software Ads (w/ M.D. Khabbaz, M.P. Aghdam, R. Greenstadt, G. Acar) [[Paper]](/papers/adlens.pdf) [[Code]](https://github.com/Racro/ccs-2026-AdLens) [[Website]](https://racro.github.io/project/adlens)
+- **PETS '25**: Automated detection and evaluation of problematic 'allowed' advertisements (w/ Julia Jose, Hussam Habib, Rachel Greenstadt) [[Paper]](/papers/Accads_PETS.pdf) [[Poster]](/posters/Accads_poster.pdf) [[Code]](https://github.com/Racro/AcceptableAds_PETS.git)
+- **ICLR '26 (AIWILD)**: Propaganda Generation by Large Language Models (w/ Julia Jose, Rachel Greenstadt) [[Paper]](https://arxiv.org/pdf/2603.04636) [[Poster]](/posters/Propaganda_poster.pdf)
+
 ## Skills
 - **Programming Languages**: Python, C/C++, JavaScript
 - **Tools & Technologies**: Linux, Git, Docker

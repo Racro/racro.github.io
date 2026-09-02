@@ -8,6 +8,12 @@ category: work
 related_publications: true
 ---
 
+<p>
+  <a href="https://racro.github.io/project/adlens"><strong>AdLens</strong> — visit the live site ↗</a>
+  &nbsp;|&nbsp;
+  <a href="/publications/">← Back to Publications</a>
+</p>
+
 Threat actors increasingly use online advertising as a delivery vector for malware, fraud and scams — often by pressuring users into installing software through fake device-infection warnings or promises of unrealistic capabilities. **AdLens** is a scalable, multilingual, modular pipeline that detects three categories of deceptive software ads at scale on Google's Ads Transparency Center: **scareware** (fake security threats), **deceptive claims** (plausible but false statements), and **misleading ad design** (ads that conceal advertiser identity and intent).
 
 AdLens uses a two-stage approach for efficiency: a low-cost semantic-similarity prioritization stage over embedded ad text, followed by a high-precision LLM-based classifier ensemble built on open-weight vision-language models. Applying AdLens to 188k crawled software-related ad creatives, we identified hundreds of deceptive ads that together received millions of impressions, and reported malicious ads that led to takedowns by Google.

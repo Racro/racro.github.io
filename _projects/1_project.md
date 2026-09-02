@@ -1,81 +1,37 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: AdLens
+description: Efficient detection of deceptive software ads at scale — CCS 2026
+img: assets/img/adlens/architecture.png
 importance: 1
 category: work
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Threat actors increasingly use online advertising as a delivery vector for malware, fraud and scams — often by pressuring users into installing software through fake device-infection warnings or promises of unrealistic capabilities. **AdLens** is a scalable, multilingual, modular pipeline that detects three categories of deceptive software ads at scale on Google's Ads Transparency Center: **scareware** (fake security threats), **deceptive claims** (plausible but false statements), and **misleading ad design** (ads that conceal advertiser identity and intent).
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+AdLens uses a two-stage approach for efficiency: a low-cost semantic-similarity prioritization stage over embedded ad text, followed by a high-precision LLM-based classifier ensemble built on open-weight vision-language models. Applying AdLens to 188k crawled software-related ad creatives, we identified hundreds of deceptive ads that together received millions of impressions, and reported malicious ads that led to takedowns by Google.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/adlens/architecture.png" title="AdLens architecture" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    AdLens architecture: an ad collection pipeline (crawl → OCR → translation) feeds a two-stage analysis pipeline — semantic-similarity ranking against reference statements, followed by multi-VLM ensemble voting with judge-based disagreement resolution.
 </div>
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/adlens/example-ads.jpg" title="Example deceptive ads" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Real deceptive software ads identified by AdLens: fake virus/hack/storage warnings (scareware), low-information call-to-action buttons with no advertiser identity (misleading design), and plausible-but-false claims like phone tracking or deleted-photo recovery (deceptive claims).
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+I built and deployed a companion website that runs the pipeline's search stage live — semantic similarity search over the full 109k-ad corpus using `google/embeddinggemma-300m` embeddings and Cloudflare Vectorize — alongside a walkthrough of the detection pipeline and the paper's full data tables.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+**Links:** [Website](https://racro.github.io/project/adlens) &nbsp;|&nbsp; [Paper](/papers/adlens.pdf) &nbsp;|&nbsp; [Code](https://github.com/Racro/ccs-2026-AdLens)
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+{% cite adlens2026 %}

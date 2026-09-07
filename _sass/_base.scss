@@ -198,6 +198,9 @@ ul.task-list input[type="checkbox"] {
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
+    // 0.875rem keeps the photo caption on one line in the 30%-wide profile
+    // column; at the inherited 16px it wrapped by ~11px.
+    font-size: 0.875rem;
     font-family: monospace;
 
     p {
@@ -223,6 +226,19 @@ ul.task-list input[type="checkbox"] {
       p {
         display: block;
       }
+    }
+  }
+}
+
+// Between the mobile breakpoint and ~992px the profile column is only
+// 164-221px wide, which is too narrow for the caption at any readable size.
+// Widen the column and ease the type down so it still sits on one line.
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .profile {
+    width: 45%;
+
+    .more-info {
+      font-size: 0.8rem;
     }
   }
 }

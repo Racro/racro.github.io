@@ -2,16 +2,13 @@
 layout: about
 title: about
 permalink: /
-subtitle: Sr. Staff Web Security Researcher at Palo Alto Networks | Ph.D. in Computer Science, NYU Tandon
 
 profile:
   align: right
   image: DP.jpg
   image_circular: false
   more_info: >
-    <p>Palo Alto Networks</p>
-    <p>Advanced URL Filtering</p>
-    <p>San Jose, CA</p>
+    <p><i class="fa-solid fa-location-dot"></i> Glacier canyon, Grindelwald</p>
 
 selected_papers: true
 social: true
@@ -27,7 +24,7 @@ latest_posts:
   limit: 3
 ---
 
-I am a Sr. Staff Web Security Researcher at Palo Alto Networks, working on the Advanced URL Filtering team to detect malicious web content at scale. I recently completed my Ph.D. in the Computer Science Department at NYU Tandon School of Engineering, advised by Prof. [Rachel Greenstadt](https://engineering.nyu.edu/faculty/rachel-greenstadt) and Prof. [Brendan Dolan Gavitt](https://engineering.nyu.edu/faculty/brendan-dolan-gavitt). My research sits at the intersection of web privacy measurement and machine learning, with a particular focus on developing solutions to measure privacy in online systems and using AI to mitigate privacy risks.
+I am a Web Security Researcher at Palo Alto Networks, working on the Advanced URL Filtering team to detect malicious web content at scale. I recently completed my Ph.D. in the Computer Science Department at NYU Tandon School of Engineering, advised by Prof. [Rachel Greenstadt](https://engineering.nyu.edu/faculty/rachel-greenstadt) and Prof. [Brendan Dolan Gavitt](https://engineering.nyu.edu/faculty/brendan-dolan-gavitt). My research sits at the intersection of web privacy measurement and machine learning, with a particular focus on developing solutions to measure privacy in online systems and using AI to mitigate privacy risks.
 
 I earned my B.Tech. in Computer Science and Engineering from the Indian Institute of Technology Bombay in 2021. For my undergraduate thesis, I worked on large-scale fuzzing of network programs to uncover vulnerabilities, under the supervision of Prof. [Giovanni Vigna](https://sites.cs.ucsb.edu/~vigna/) and Prof. [Christopher Kruegel](https://www.cs.ucsb.edu/people/faculty/christopher-kruegel).
 
